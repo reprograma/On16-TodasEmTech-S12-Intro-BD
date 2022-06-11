@@ -53,8 +53,9 @@ db.Nome-da-collection.updateOne({filtro},{ $set: {campos a serem atualizados}})
 ```
 
 - Para atualizar vários registros, utilizamos o updateMany com o filtro selecionado:
-
+```
 db.Nome-da-collection.updateMany({filtro},{ $set: {campos a serem atualizados}})
+```
 
 - Para deletar um registro (tem que estar trabalhando na collection):
 ```

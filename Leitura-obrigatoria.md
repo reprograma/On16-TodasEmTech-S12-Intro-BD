@@ -1,6 +1,6 @@
 Olá, maravilhosas!
 
-Antes de comaçar a colocar a mão na massa, vamos fazer uma esquenta lendo dois artigos que ajudam a expandir a mente. 
+Antes de começar a colocar a mão na massa, vamos fazer uma esquenta lendo dois artigos que ajudam a expandir a mente. 
 
 - Este primeiro é obrigatório para nosso desenvolvimento de hoje: [Artigo - O que é MongoDB](https://www.alura.com.br/artigos/mongodb-o-banco-baseado-em-documentos)
 
