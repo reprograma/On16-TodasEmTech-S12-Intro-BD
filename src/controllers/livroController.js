@@ -1,6 +1,5 @@
-const livros = require ("../models/livros.json");
+const livros = require ("../models/livros");
 const fs = require ("fs");
-
 
 
 const getAllLivros = (req, res) => {
@@ -30,13 +29,10 @@ const deleteLivros =  (req, res) => {
   res.send(`Livro ${id} removido com sucesso`);
 };
 
+
 function buscaLivro(id) {
   return livros.findIndex((livro) => livro.id == id);
 }
-
-
-
-
 
 
 module.exports = {
