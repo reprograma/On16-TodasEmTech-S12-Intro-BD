@@ -1,7 +1,6 @@
 const livros = require ("../models/livros");
 const fs = require ("fs");
 
-
 const getAllLivros = (req, res) => {
   res.status(200).send(livros);
 };
