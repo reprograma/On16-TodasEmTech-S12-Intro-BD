@@ -23,7 +23,7 @@ O próximo passo agora é refatorar o código do nosso projeto e criar o process
 
 ### Cadastrando MongoDB Atlas
 
-Neste projeto iremos utilizar a GUI MongoDB Atlas para gerenciar nosso banco de dados, será necessário fazer o cadastro no site oficial MongoDB Atlas, cadastrar um usuário e optar pela modalidade shared(pública) com o provedor de sua escolha. 
+Neste projeto iremos utilizar a GUI MongoDB Atlas para gerenciar nosso banco de dados, será necessário fazer o cadastro no site oficial [MongoDB Atlas](https://www.mongodb.com/atlas/database), cadastrar um usuário e optar pela modalidade shared(pública) com o provedor de sua escolha. 
 
 Após seguir o passo a passo de configuração de cluster e projeto, será necessário cadastrar um usuário e senha para criar seu database. Não esqueça de anotar e guardar a senha em local seguro.  
 
@@ -34,7 +34,7 @@ Após a criação do database, você já pode clicar em `connect`, como vamos us
 
 ### Iniciando com Mongoose
 
-Para conseguirmos conectar o MongoDB no nosso projeto, iremos utilizar a biblioteca (mongoose)[https://www.npmjs.com/package/mongoose] , na documentação oficial você tem acesso a sintaxe de configuração, mas fica tranquila e se liga no passo a passo a seguir.
+Para conseguirmos conectar o MongoDB no nosso projeto, iremos utilizar a biblioteca [mongoose](https://www.npmjs.com/package/mongoose) , na documentação oficial você tem acesso a sintaxe de configuração, mas fica tranquila e se liga no passo a passo a seguir.
 
 Vamos instalar a Instalar a lib `mongoose` via npm install: 
 
