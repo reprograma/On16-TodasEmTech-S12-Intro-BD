@@ -113,13 +113,22 @@ const livroSchema = new mongoose.Schema(
   }
 );
 ```
+
+Para finalizar o Schema, vamos declarar uma variável chamada livros e atribuir a o valor `mongoose.model('livros', livroSchema)`, duas linhas seguintes fazemos a exportação da variável criada, ficará assim:
+
+```js
+const livros = mongoose.model('livros', livroSchema);
+
+module.exports = livros;
+```
+
 --------------------------------------------------------------------
 
 ### Refatorando CRUD 
 
 Após as alterações da estrutura de dados de JSON para Schema, precisamos refatorar os códigos de cada rota do nosso projeto, poderemos ter acesso ao banco de dados pelo mongoDB Atlas e também pelo postman. 
 
-- Método Read 
+- *Método Read*: Vamos refatorar a rota Get e usaremos o comando `find` usado para filtrar dados no banco de dados MongoDB.  
 
 ```js
 const getAllLivros = (req, res) => {
@@ -141,7 +150,7 @@ const getLivros = (req, res) => {
 }
 ```
 
-- Método Create = Create
+- *Método Create*: Vamos refatorar a rota Post e usaremos a palavra reservada `new` para construir um novo objeto no banco de dados. Será construido um bloco if/else para retornar mensagem de erro e efetuar a inserção de um novo documento no banco de dados MongoDB.  
 
 ```js
 const createLivros = (req, res) => {
@@ -157,7 +166,7 @@ const createLivros = (req, res) => {
 }
 ```
 
-- Método Update 
+- *Método Update*: Vamos refatorar a rota Update, usaremos o comando `find`, dentro do parâmetro colocamos o filtro localizador `id` e  a sintaxe de alteração `$set:` para localizar e alterar o documento. Será construido um bloco if/else para confirmar o status code do processo de no banco de dados MongoDB. 
 
 ```js
 const updateLivros = (req, res) => {
@@ -173,7 +182,7 @@ const updateLivros = (req, res) => {
 }
 ```
 
-- Método Delete 
+- *Método Delete*: Vamos refatorar a rota Delete, usaremos o comando `find`, dentro do parâmetro colocamos o filtro localizador `id` e uma palavra reservada `err`, será contruido um bloco if/else para confirmar o status code do processo de exclusão do documento no banco de dados MongoDB. 
 
 ```js
 const deleteLivros = (req, res) => {
