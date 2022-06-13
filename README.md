@@ -209,12 +209,12 @@ A atividade será em parceria com a API desenvolvida na atividade da aula de rev
 
 Passo a passo atividade:
 
-1 - Fazer um fork deste repositório.
-2 - Clone na sua máquina
-3 - Crie  uma branch com seu nome;
-4 -  incluir sua API da semana 11 ou outra de sua escolha;
-5 - Após as configurações e alterações de conexão, realizar os commits e git push 
-6 - Fazer o pull request, compartilhando o link no Classroom. 
+- 1 - Fazer um fork deste repositório.
+- 2 - Clone na sua máquina
+- 3 - Crie  uma branch com seu nome;
+- 4 -  incluir sua API da semana 11 ou outra de sua escolha;
+- 5 - Após as configurações e alterações de conexão, realizar os commits e git push 
+- 6 - Fazer o pull request, compartilhando o link no Classroom. 
 
 
 
