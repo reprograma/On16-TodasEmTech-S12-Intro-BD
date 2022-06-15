@@ -3,10 +3,11 @@ const index = require ("./routes/index.js");
 const livros = require ("./routes/livros.js");
 const db = require ("./config/dbConnect.js");
 
-db.on("error", console.log.bind(console, 'Erro de conexão'))
-db.once("open", () => {
-    console.log('Conexão com o banco feita com sucesso')
-});
+//Conexão da aula da professora. Que quebrou.
+// db.on("error", console.log.bind(console, 'Erro de conexão'))
+// db.once("open", () => {
+//     console.log('Conexão com o banco feita com sucesso')
+// });
 
 
 const app = express();
@@ -25,4 +26,6 @@ app.use(function (req, res, next) {
 app.use("/", index);
 app.use("/livros", livros);
 
+//Conexão da aula de monitoria. Que deu certo.
+db.connect()
 module.exports = app;
