@@ -7,13 +7,13 @@ router.get("/catalogo", controller.getAllGames)
  
 router.get("/catalogo/:id", controller.getById)
  
-router.post("/cadastrar", controller.postGames)
+router.post("/cadastrar", controller.createGames)
  
 router.put("/update/:id", controller.gameUpdate)
  
 router.delete("/delete/:id", controller.deleteGame)
  
-router.patch("/atualizar/liked/:id",controller.atualizarLikedGame)
+
  
  
 module.exports = router
