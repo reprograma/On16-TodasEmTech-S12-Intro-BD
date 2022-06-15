@@ -12,7 +12,5 @@ router.post("/games", controller.addNewGame);
 router.put("/games/:id", controller.updateGame);
 //delete
 router.delete("/games/:id", controller.deleteGame);
-//patch
-router.patch("/games/:id/liked", controller.gameRankUpdated);
 
 module.exports = router;

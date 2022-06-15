@@ -1,6 +1,6 @@
 const express = require ("express");
-const index = require ("./router/index"); 
-const games = require ("./router/games");
+const index = require ("./router/index.js"); 
+const games = require ("./router/games.js");
 const db = require ("./config/dbConnect");
 
 db.on("error", console.log.bind(console, 'Erro de conexão'))

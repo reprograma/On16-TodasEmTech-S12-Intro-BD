@@ -1,157 +1,64 @@
-const games = require("../models/games.json");
-
-const fs = require("fs");
+const games = require ("../models/games");
+const fs = require ("fs");
 
 const getAllGames = (req, res) => {
-  try {
-    res.status(200).json({
-      GameStore: games,
-    });
-  } catch {
-    res.status(500).json({
-      message: "Internal Server Error",
-    });
-  }
+  games.find((err, games) => {
+    res.status(200).json(games);
+  })  
 };
 
 const getById = (req, res) => {
-  const gamesReq = req.params.id;
-  const gamesFilter = games.filter((games) => games.id == gamesReq);
-  if (gamesFilter.length > 0) {
-    res.status(200).send(gamesFilter);
-  } else {
-    res.status(404).send({
-      message: "Not Found",
-    });
-  }
-};
+  const id = req.params.id;
 
-const addNewGame = (req, res) => {
-  const { id, title, launchYear, consoles, liked } = req.body;
-  games.push({
-    id: games.length + 1,
-    title,
-    launchYear,
-    consoles,
-    liked,
-  });
-  fs.writeFile(
-    "./src/models/games.json",
-    JSON.stringify(games),
-    "utf8",
-    function (err) {
-      if (err) {
-        res.status(500).send({ message: err });
-      } else {
-        console.log("File created successfully");
-        const gameFound = games.find((game) => game.id == id);
-        res.status(200).send(gameFound);
-      }
+  games.findById(id, (err, games) => {
+    if(err) {
+      res.status(400).send({message: `${err.message} - id do game não encontrado`})
+    } else {
+      res.status(200).send(games);
     }
-  );
-  res.status(201).send({ message: "Game added successfully" });
+  })
 };
 
-const updateGame = (req, res) => {
-  let idReq = req.params.id;
-  let gameReq = req.body;
+const addNewGame =  (req, res) => {
+  let game = new games(req.body);
 
-  const gameFound = games.find((game) => game.id == idReq);
-  const gameIndex = games.indexOf(gameFound);
-
-  if (gameIndex != -1) {
-    gameFound.body = gameReq;
-    games.slice(gameIndex, 1, gameReq);
-    fs.writeFile(
-      "./src/models/games.json",
-      JSON.stringify(games),
-      "utf8",
-      function (err) {
-        if (err) {
-          res.status(500).send({ message: err });
-        } else {
-          console.log("File updated successfully");
-          const gameFound = games.find((game) => game.id == id);
-          res.status(200).send(gameFound);
-        }
-      }
-    );
-    res.status(200).json({
-      message: "Game updated successfully",
-      games,
-    });
-  }
+  game.save((err) => {
+    if(err) {
+      res.status(500).send({message: `${err.message} - falha ao cadastrar game`})
+    } else {
+      res.status(201).send(game.toJSON())
+    }
+  })
 };
 
-const deleteGame = (req, res) => {
-  const idReq = req.params.id;
-  const gameIndex = games.findIndex((game) => game.id == idReq);
+const updateGame =  (req, res) => {
+  const id = req.params.id;
 
-  games.splice(gameIndex, 1);
-
-  if (gameIndex != -1) {
-    fs.writeFile(
-      "./src/models/games.json",
-      JSON.stringify(games),
-      "utf8",
-      function (err) {
-        if (err) {
-          res.status(500).send({ message: "internal error server" });
-        } else {
-          console.log("File deleted successfully");
-        }
-      }
-    );
-    res.status(200).json({
-      message: "Game deleted successfully",
-      "deleted game": idReq,
-      games,
-    });
-  } else {
-    res.status(404).json({
-      message: "Game not found",
-    });
-  }
+  games.findByIdAndUpdate(id, {$set: req.body}, (err) => {
+    if(!err) {
+      res.status(200).send({message:'game atualizado com sucesso'})
+    } else {
+      res.status(500).send({message: err.message})
+    }
+  })
 };
 
-const gameRankUpdated = (req, res) => {
-  let idReq = req.params.id;
-  let rankReq = req.body.liked;
+const deleteGame =  (req, res) => {
+  const id = req.params.id;
 
-  const gameFound = games.find((game) => game.id == idReq);
-  const gameIndex = games.indexOf(gameFound);
-
-  if (gameIndex != -1) {
-    gameFound.liked = rankReq;
-
-    games.splice(gameIndex, 1, gameFound);
-
-    fs.writeFile(
-      "./src/models/games.json",
-      JSON.stringify(games),
-      "utf8",
-      function (err) {
-        if (err) {
-          res.status(500).send({ message: err });
-        } else {
-          console.log("File updated successfully");
-          const gameUpdated = games.find((game) => game.id == idReq);
-          res.status(200).send(gameUpdated);
-        }
-      }
-    );
-  } else {
-    res.status(404).send({
-      message: "Game not found",
-    });
-  }
+  games.findByIdAndDelete(id, (err) => {
+    if(!err) {
+      res.status(200).send({message:'game deletado com sucesso'})
+    } else {
+      res.status(500).send({message: err.message})
+    }
+  })
 };
 
 module.exports = {
-  getAllGames,
-  getById,
-  addNewGame,
-  updateGame,
-  deleteGame,
-  gameRankUpdated,
+    getAllGames,
+    getById, 
+    addNewGame,
+    updateGame,
+    deleteGame
 };
