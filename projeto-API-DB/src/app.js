@@ -1,6 +1,18 @@
 const express = require ("express");
 const index = require ("./routes/index.js"); 
 const livros = require ("./routes/livros.js");
+const db = require("./config/dbConnect.js");
+
+// sinalização de erro. O on recebe dois parametros
+db.on("error", console.log.bind(console, 'Erro de conexão'))
+
+//quando a conexão der certo
+db.once("open", () => {
+    console.log('Conexão com o banco feita com sucesso')
+})
+
+
+
 
 const app = express();
 
