@@ -5,7 +5,7 @@ const gameSchema = new mongoose.Schema ({
     id: {type: String},
     title: {type: String, required: true},
     launchYear: {type: Number, required: true},
-    consoles: {type: String, required: true},
+    consoles: {type: Array, required: true},
     liked: {type: Boolean, required: true}
 })
 
