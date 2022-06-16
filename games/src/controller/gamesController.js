@@ -50,23 +50,19 @@ const updateGameById = (req, res) => {
 
 const deleteGameById = (req, res) => {
 
-    try {
+    const id = req.params.id
 
-        const idRequest = req.params.id
-
-        const indexGame = games.findIndex(game => game.id == idRequest)
-
-        games.splice(indexGame, 1)
-
-        res.status(200).send({ message: 'Game deleted succesfully', deleted: idRequest, games })
-
-    } catch(err) {
-        res.status(500).send({ message: 'Internal error'})
-    }
+    games.findByIdAndDelete(ir, (err) => {
+        if(!err) {
+            res.status(200).send({message: 'Game removed'})
+        } else {
+            res.status(500).send({message: err.message})
+        }
+    })
 
 }
 
-const updateLike = (req, res) => {
+/*const updateLike = (req, res) => {
 
     const idRequest = req.params.id
     const likedRequest = req.body.liked
@@ -85,7 +81,7 @@ const updateLike = (req, res) => {
 
         res.status(500).send({ message: 'Internal error' })
     }
-}
+}*/
 
     
 
@@ -95,5 +91,5 @@ module.exports = {
     postNewGame,
     updateGameById,
     deleteGameById,
-    updateLike
+    //updateLike
 }
