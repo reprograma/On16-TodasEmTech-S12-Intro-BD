@@ -10,4 +10,3 @@ router.put("/:id", controller.updateLivros);
 router.delete("/:id", controller.deleteLivros);
 
 module.exports = router;
-    
