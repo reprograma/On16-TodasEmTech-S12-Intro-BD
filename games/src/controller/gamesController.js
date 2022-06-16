@@ -1,18 +1,11 @@
-const { response } = require('express')
 const express = require('express')
 const games = require('../models/games.js')
 
 const getAllGames = (req, res) => {
 
-    try {
-        res.status(200).json([
-            {
-                'Games': games
-            }
-        ])
-    } catch(err) {
-        res.status(500).send({ message: 'Internal error'})
-    }
+   games.find((err, games) => {
+    res.status(200).json(livros)
+   })
 }
 
 
