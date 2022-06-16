@@ -33,3 +33,16 @@ const postNewGame = (req, res) => {
         }
     })
 }
+
+const updateGameById = (req, res) => {
+
+    const id = req.params.id
+
+    games.findByIdAndUpdate(id, {$set: req.body}, (err) => {
+        if(!err) {
+            res.status(200).send({message: 'Game updated'})
+        } else {
+            res.status(500).send({message: err.message})
+        }
+    })
+}
