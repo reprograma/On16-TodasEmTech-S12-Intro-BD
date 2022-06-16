@@ -59,3 +59,17 @@ const deleteGameById = (req, res) => {
         }
     })
 }
+
+const updateLike = (req, res) => {
+
+    const id = req.params.id
+    const{liked} = req.body
+
+    games.findByIdAndUpdate (id, {$set: {liked}}, (err) => {
+        if(!err) {
+            res.status(200).send({message: 'Updated like'})
+        } else {
+            res.status(500).send({message: err.message})
+        }
+    })
+}
