@@ -73,3 +73,12 @@ const updateLike = (req, res) => {
         }
     })
 }
+
+module.exports = {
+    getAllGames,
+    getGamesById,
+    postNewGame,
+    updateGameById,
+    deleteGameById,
+    updateLike
+}
