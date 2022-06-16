@@ -8,21 +8,17 @@ const getAllGames = (req, res) => {
    })
 }
 
-
 const getGamesById = (req, res) => {
 
-    try {
-        let idRequest = req.params.id
-        let idFilter = games.filter(game => game.id == idRequest)
+    const id = req.params.id
 
-        if (idFilter.length > 0) {
-            res.status(200).send(idFilter)
+    games.findById(id, (err, livros) => {
+        if(err) {
+            res.status(404).send({message: `${err.message} - Game ID not found`})
         } else {
-            res.status(404).send({ message: 'Game not found'})
+            res.status(200).send(games)
         }
-    } catch(err) {
-        response.status(500).send({ message: 'Internal error'})
-    }
+    })
 
 }
 
