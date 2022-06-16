@@ -1,5 +1,5 @@
-const livros = require ("../models/livros.js");
-const fs = require ("fs");
+const livros = require("../models/livros.js");
+const fs = require("fs");
 
 const getAllLivros = (req, res) => {
   livros.find((err, livros) => {
@@ -19,7 +19,8 @@ const getLivros = (req, res) => {
       res.status(200).send(livros);
     }
   })
-};
+}
+
 
 const createLivros = (req, res) => {
   let livro = new livros(req.body);
@@ -35,10 +36,11 @@ const createLivros = (req, res) => {
   })
 };
 
+
 const updateLivros = (req, res) => {
   const id = req.params.id;
 
-  livros.findByIdUpdate(id, {
+  livros.findByIdAndUpdate(id, {
     $set: req.body
   }, (err) => {
     if (!err) {
@@ -59,7 +61,7 @@ const deleteLivros = (req, res) => {
   livros.findByIdAndDelete(id, (err) => {
     if (!err) {
       res.status(200).send({
-        message: 'Livro removido com sucesso'
+        message: 'Livro deletado com sucesso'
       })
     } else {
       res.status(500).send({
@@ -67,14 +69,7 @@ const deleteLivros = (req, res) => {
       })
     }
   })
-}
-
-
-
-//function buscaLivro(id) {
-//  return livros.findIndex((livro) => livro.id == id);
-//}
-
+};
 
 module.exports = {
   getAllLivros,
@@ -82,4 +77,6 @@ module.exports = {
   createLivros,
   updateLivros,
   deleteLivros
-}
+};
+                           
+                          
