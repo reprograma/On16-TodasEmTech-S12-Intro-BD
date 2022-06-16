@@ -1,4 +1,4 @@
-const app = require('./src/app')
+const app = require('./src/app.js')
 
 const port = 2020
 
