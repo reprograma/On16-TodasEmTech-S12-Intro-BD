@@ -24,15 +24,15 @@ const getGamesById = (req, res) => {
 
 const postNewGame = (req, res) => {
 
-    try {
-        const postGame = { id, title, launchYear, consoles, liked } = req.body
-        games.push({ id: games.length + 1, title, launchYear, consoles, liked})
+    let game = new games(req.body)
 
-        res.status(201).send({ message: 'New game added', postGame})
-
-    } catch(err) {
-        res.status(500).send({ message: 'Internal error'})
-    }
+    game.save((err) => {
+        if(err) {
+            res.status(500).send({message: `${err.message} - Failed to post new game`})
+        } else {
+            res.status(201).send(livro.toJson())
+        }
+    })
 
 }
 
