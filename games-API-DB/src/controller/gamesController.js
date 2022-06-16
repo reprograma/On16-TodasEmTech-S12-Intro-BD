@@ -46,3 +46,16 @@ const updateGameById = (req, res) => {
         }
     })
 }
+
+const deleteGameById = (req, res) => {
+
+    const id = req.params.id
+
+    games.findByIdAndDelete(id, (err) => {
+        if(!err) {
+            res.status(200).send({message: 'Game removed'})
+        } else {
+            res.status(500).send({message: err.message})
+        }
+    })
+}
