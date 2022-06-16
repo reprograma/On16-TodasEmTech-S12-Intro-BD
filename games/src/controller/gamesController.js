@@ -4,7 +4,7 @@ const games = require('../models/games.js')
 const getAllGames = (req, res) => {
 
    games.find((err, games) => {
-    res.status(200).json(livros)
+    res.status(200).json(games)
    })
 }
 
@@ -12,7 +12,7 @@ const getGamesById = (req, res) => {
 
     const id = req.params.id
 
-    games.findById(id, (err, livros) => {
+    games.findById(id, (err, games) => {
         if(err) {
             res.status(404).send({message: `${err.message} - Game ID not found`})
         } else {
@@ -30,7 +30,7 @@ const postNewGame = (req, res) => {
         if(err) {
             res.status(500).send({message: `${err.message} - Failed to post new game`})
         } else {
-            res.status(201).send(livro.toJson())
+            res.status(201).send(game.toJson())
         }
     })
 }
@@ -52,7 +52,7 @@ const deleteGameById = (req, res) => {
 
     const id = req.params.id
 
-    games.findByIdAndDelete(ir, (err) => {
+    games.findByIdAndDelete(id, (err) => {
         if(!err) {
             res.status(200).send({message: 'Game removed'})
         } else {
