@@ -20,3 +20,16 @@ const getAllGames = (req, res) => {
         }
     })
 }
+
+const postNewGame = (req, res) => {
+
+    let game = new games(req.body)
+
+    game.save((err) => {
+        if(err) {
+            res.status(500).send({message: `${err.message} - Failed to post new game`})
+        } else {
+            res.status(201).send(game.toJson())
+        }
+    })
+}
