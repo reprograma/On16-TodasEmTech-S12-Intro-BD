@@ -1,0 +1,26 @@
+{
+  "name": "on16-games-api-bd",
+  "version": "1.0.0",
+  "description": "API based on S11 of Reprograma, now included with database MongoDB",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Louise Costa",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.3.8",
+    "nodemon": "^2.0.16"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/louicosta/On16-TodasEmTech-S12-Intro-BD.git"
+  },
+  "bugs": {
+    "url": "https://github.com/louicosta/On16-TodasEmTech-S12-Intro-BD/issues"
+  },
+  "homepage": "https://github.com/louicosta/On16-TodasEmTech-S12-Intro-BD#readme"
+}
