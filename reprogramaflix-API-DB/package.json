@@ -1,0 +1,17 @@
+{
+  "name": "reprogramaflix-api-db",
+  "version": "1.0.0",
+  "description": "API para listar/adicionar/atualizar e deletar séries do Banco",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.3.8",
+    "nodemon": "^2.0.16"
+  }
+}
