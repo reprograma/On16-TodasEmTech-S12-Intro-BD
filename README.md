@@ -1,3 +1,48 @@
+# INTRODUÇÃO AO BANCO DE DADOS <img src="./img/mongoDb.png" height = 30px widht = 30 px alt="mongoDb" >
+
+
+
+# SEMANA 12 - <img src="./img/reprograma.png" height= 30px widht= 30px alt="Reprograma">
+
+# Aula Ministrada por Tereza Oliveira
+
+<img src="https://www.imagensanimadas.com/data/media/145/internet-imagem-animada-0030.gif">
+<p>Fonte: Gif www.imagensanimadas.com</p>
+
+#### O que aprendi 🛰️
+
+* Biblioteca mongoose;
+* 
+
+#### Qual a diferença entre DADOS & INFORMAÇÕES?
+- Dados podem ser qualquer contéudo p.exemplo: números, valores, medições, cpf, horários, localidade etc... Estes contéudos por si só não tem nenhum valor agregado, não se consegue tomar nenhuma decisão ou mesmo orientação.
+
+- Informações é o resultado do tratamento do dado,  ou seja o valor real da coleta após a análise do contéudo quantificado  que  o dado tem. Na etapa do tratamento apura-se as mensagens transmitidas dos dados, para que isto ocorra tem que organizar e ordenar os dados e processar os dados. Para esta fase o uso do sistemas de gestão, são os grandes aliados.
+
+#### O que são Entidades, Relacionamento, Atributos e Dominios?
+- Entidades é um objeto que existe e é distinguível de outros objetos, tem algum significado, e sobre o qual é necessário guardar informação.Uma entidade é representada por um conjunto de atributos.
+
+- Relacionamento é uma associação entre várias entidades e representa a maneira como essas entidades podem estar logicamente relacionadas.
+
+- Atributos é uma função que mapeia um conjunto de entidades num domínio e identifica, qualifica e descreve esse conjunto de entidades. 
+
+Domínio é o conjunto de valores possíveis de um atributo.
+
+Tipos de atributos:
+
+Atributos Atómicos – Não é possível dividi-los em vários campos. Ex: peso, preço unitário…
+Atributos Compostos – É possível decompor o atributo em vários. Ex: Nome, Morada.
+Atributos Identificadores – Identifica inequivocamente um registo numa entidade. Ex: BI, Matricula.
+Atributos candidatos – Estão em condições de ser chave primária. Ex: Nº contribuinte.
+Chave estrangeira ou externa.
+
+Exemplo de entidades, atributos e domínios:
+
+
+<img src="./img/BD.png" height= 90px widht= 90px>
+
+
+
 # On16-TodasEmTech-S12-Intro-BD
 
 Olá, sejam bem-vindas a aula de banco de dados e integração! Meu nome é Tereza Oliveira (@Tereza25), e irei acompanhar vocês nessa semana.
