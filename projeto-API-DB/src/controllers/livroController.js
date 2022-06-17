@@ -1,5 +1,9 @@
+Branch-API-Reprogramaflix
 const livros = require("../models/livros.js");
 const fs = require("fs");
+
+const livros = require ("../models/livros.js");
+main
 
 const getAllLivros = (req, res) => {
   livros.find((err, livros) => {
@@ -40,6 +44,7 @@ const createLivros = (req, res) => {
 const updateLivros = (req, res) => {
   const id = req.params.id;
 
+Branch-API-Reprogramaflix
   livros.findByIdAndUpdate(id, {
     $set: req.body
   }, (err) => {
@@ -47,6 +52,11 @@ const updateLivros = (req, res) => {
       res.status(200).send({
         message: 'Livro atualizado com sucesso'
       })
+
+  livros.findByIdAndUpdate(id, {$set: req.body}, (err) => {
+    if(!err) {
+      res.status(200).send({message:'Livro atualizado com sucesso'})
+main
     } else {
       res.status(500).send({
         message: err.message
@@ -57,12 +67,19 @@ const updateLivros = (req, res) => {
 
 const deleteLivros = (req, res) => {
   const id = req.params.id;
+Branch-API-Reprogramaflix
 
   livros.findByIdAndDelete(id, (err) => {
     if (!err) {
       res.status(200).send({
         message: 'Livro deletado com sucesso'
       })
+
+  
+  livros.findByIdAndDelete(id, (err) => {
+    if(!err) {
+      res.status(200).send({message:'Livro deletado com sucesso'})
+main
     } else {
       res.status(500).send({
         message: err.message
