@@ -10,6 +10,7 @@ const router = express.Router()
 // router, verbo http (caminho, função)
 router.get("/series", controller.getAllSeries)
 router.get("/series/:id", controller.getSerieById)
+router.put("/series/atualizar/:id", controller.updateSeries)
 router.post("/novaserie", controller.createSeries)
 router.delete("/series/delete/:id", controller.deleteSerieById)
 
