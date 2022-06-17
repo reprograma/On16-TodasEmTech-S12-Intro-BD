@@ -63,7 +63,7 @@ const deleteSerieById = (req, res) => {
     series.findByIdAndDelete(id, (err) => {
         if (!err) {
             res.status(200).send({
-                message: 'Livro deletado com sucesso'
+                message: 'Série deletada com sucesso'
             })
         } else {
             res.status(500).send({
