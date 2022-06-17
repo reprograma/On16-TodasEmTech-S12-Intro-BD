@@ -1,6 +1,12 @@
 const express = require ("express");
 const index = require ("./routes/index.js"); 
 const livros = require ("./routes/livros.js");
+const db = require ("./config/dbConnect.js");
+
+db.on("error", console.log.bind(console, "erro de conexão"))
+db.once("open", () => {
+    console.log("Conexão feita com sucesso")
+})
 
 const app = express();
 
