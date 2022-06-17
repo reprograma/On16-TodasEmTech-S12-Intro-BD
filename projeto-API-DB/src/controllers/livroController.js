@@ -33,7 +33,7 @@ const createLivros =  (req, res) => {
 const updateLivros =  (req, res) => {
   const id = req.params.id;
 
-  livros.findByIdUpdate(id, {$set: req.body}, (err) =>{
+  livros.findByIdAndUpdate(id, {$set: req.body}, (err) =>{
     if(!err) {
       res.status(200).send({message: "Livro atualizado com sucesso"})
     } else {
@@ -45,7 +45,7 @@ const updateLivros =  (req, res) => {
 const deleteLivros =  (req, res) => {
   const id = req.params.id;
 
-  livros.findByIdDelete(id, (err) =>{
+  livros.findByIdAndDelete(id, (err) =>{
     if(!err) {
       res.status(200).send({message: "Livro removido com sucesso"})
     } else {

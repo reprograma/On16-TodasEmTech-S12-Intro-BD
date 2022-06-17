@@ -33,7 +33,7 @@ const createSeries =  (req, res) => {
 const updateSeries =  (req, res) => {
   const id = req.params.id;
 
-  series.findByIdUpdate(id, {$set: req.body}, (err) =>{
+  series.findByIdAndUpdate(id, {$set: req.body}, (err) =>{
     if(!err) {
       res.status(200).send({message: "Série atualizada com sucesso"})
     } else {
@@ -45,7 +45,7 @@ const updateSeries =  (req, res) => {
 const deleteSeries =  (req, res) => {
   const id = req.params.id;
 
-  livros.findByIdDelete(id, (err) =>{
+  livros.findByIdAndDelete(id, (err) =>{
     if(!err) {
       res.status(200).send({message: "Série removida com sucesso"})
     } else {
