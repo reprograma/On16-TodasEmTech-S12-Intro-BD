@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/reprograma/On16-TodasEmTech-S12-Intro-BD#readme",
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.16"
   },
   "dependencies": {
     "express": "^4.17.3",

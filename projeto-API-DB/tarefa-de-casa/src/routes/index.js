@@ -1,4 +1,3 @@
-//página inicial da aplicação
 const express = require ("express");
 
 const router = express.Router();
