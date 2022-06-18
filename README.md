@@ -5,7 +5,7 @@
 
 
 <!--ts-->
-- [🪄 Prepararando o ambiente!](#-prepararando-o-ambiente)
+- [🪄 Preparando o ambiente!](#-preparando-o-ambiente)
 - [🕹️ Games](#️-games)
 - [🕹️ Postman Games](#️-postman-games)
 - [🕹️ MongoDB Atlas Games](#️-mongodb-atlas-games)
@@ -15,7 +15,7 @@
 
 </br>
 
-## 🪄 Prepararando o ambiente!
+## 🪄 Preparando o ambiente!
 
 </br>
 
@@ -112,10 +112,8 @@ A interface é um CRUD, onde é possível listar os games no banco de dados; lis
  <br/>
 </a>
 
-<p align="center">
-Desenvolvido por
 
- [![Linkedin Badge](https://img.shields.io/badge/-Andreza_Pipolo-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/ndrezapipolo/)](https://www.linkedin.com/in/andrezapipolo/)  com o apoio das amigas 💙
+Desenvolvido por  [![Linkedin Badge](https://img.shields.io/badge/-Andreza_Pipolo-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/andrezapipolo/)](https://www.linkedin.com/in/andrezapipolo/)  com o apoio das amigas 💙
 
  <img src="https://user-images.githubusercontent.com/84551213/171416454-ab93ab7f-e5a0-4276-81ec-4f5cb79dff31.png" alt="logo da reprograma" border="0" width = "200" />
 </p></p> <p align="center"></p>
