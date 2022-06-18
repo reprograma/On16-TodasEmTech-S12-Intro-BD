@@ -1,9 +1,11 @@
-const catalog = require("../models/games.json")
+const catalog = require("../models/games.js")
 const fs = require("fs")
 
 const allGames = (req, res) => {
     try{
-        res.status(200).json({ Games: catalog})
+        catalog.find((err,games)=>{
+            res.status(200).json(games)
+        })
     }catch{
         res.status(500).send({ Message: "Internal server error"})
     }
@@ -11,101 +13,48 @@ const allGames = (req, res) => {
 
 const idGames = (req, res) => {
     const idRequest = req.params.id
-    const idFilter = catalog.filter((game) => game.id == idRequest)
 
-    if(idFilter.length > 0){
-        res.status(200).send(idFilter)
-    }else{
-        res.status(404).send({ Message: "Id not found"})
-    }
+    catalog.findById(idRequest, (err,game)=>{
+        if(err){
+            res.status(400).send({message: `${err.message} - id do game não encontrado`})
+        }else{
+            res.status(200).send(game)
+        }
+    })
 }
 
 const addGames = (req, res) => {
-    const {title, launchYear, consoles, liked} = req.body
-    catalog.push({id: catalog.length +1, title, launchYear, consoles, liked})
+    let game = new catalog(req.body);
 
-    fs.writeFile("./src/models/games.json", JSON.stringify(catalog), "utf8", function (err) {
+    game.save((err)=>{
         if(err){
-            res.status(500).send({ Message: err})
+            res.status(500).send({message : `${err.message} - falha ao cadastrar game`})
         }else{
-            console.log("Updated file successfully")
-            const gameFound = catalog.find((games) => games.id == catalog.length)
-            res.status(200).send(gameFound)
+            res.status(201).send(game.toJSON())
         }
     })
 }
 
 const updateGames = (req, res) => {
     const idRequest = req.params.id
-    const {title, launchYear, consoles, liked} = req.body
-    const gamesFound = catalog.find((games => games.id == idRequest))
-    const gamesIndex = catalog.indexOf(gamesFound)
-
-    if(gamesIndex != -1){
-        catalog[gamesIndex] = {
-            id: parseInt(idRequest),
-            title,
-            launchYear,
-            consoles,
-            liked
-        }
-        res.status(200).send(catalog[gamesIndex])
-
-        fs.writeFile("./src/models/games.json", JSON.stringify(catalog), "utf8", function (err) {
-            if(err){
-                res.status(500).send({ Message: err})
-            }else{
-                console.log("Updated file successfully")
-                const gameFound = catalog.find((games) => games.id == catalog.length)
-                res.status(200).send(gameFound)
-            }
-        })
-    }else{
-        res.status(404).send({ Message: "Id not found"})
-    }
-}
-
-const likedGames = (req, res) => {
-    const idRequest = req.params.id
-    const likedRequest = req.body.liked
-    const gameFind = catalog.find((game) => game.id == idRequest) //encontrando a série
-    const gameIndex = catalog.indexOf(gameFind) //Identificando o indice da série no meu array
-
-    if (gameIndex >= 0) {
-        gameFind.liked = likedRequest
-        catalog.splice(gameIndex, 1, gameFind)
-
-        fs.writeFile("./src/models/games.json", JSON.stringify(catalog), "utf8", function (err) {
-            if(err){
-                res.status(500).send({ Message: err})
-            }else{
-                console.log("Updated file successfully")
-                const gameFound = catalog.find((games) => games.id == catalog.length)
-                res.status(200).send(gameFound)
-            }
-        })
-    }else{
-        res.status(404).send({ Message: "Id not found"})
-    }
+    catalog.findByIdAndUpdate(idRequest,{$set: req.body}, (err)=>{
+        if(!err) {
+            res.status(200).send({message:'Game atualizado com sucesso'})
+          } else {
+            res.status(500).send({message: err.message})
+          }
+    })
 }
 
 const deleteGames = (req, res) => {
     const idRequest = req.params.id
-    const indexGame = catalog.findIndex((game) => game.id == idRequest)
-
-    if (indexGame != -1) {
-        catalog.splice(indexGame, 1)
-    
-        fs.writeFile("./src/models/games.json", JSON.stringify(catalog), "utf8", function (err) {
-            if(err){
-                res.status(500).send({ Message: err})
-            }else{
-                res.status(200).send({ Message: "Game deleted"})
-            }
-        })
-    }else{
-        res.status(404).send({ Message: "Id not found"})
-    }
+    catalog.findByIdAndDelete(idRequest, (err) =>{
+        if(!err) {
+            res.status(200).send({message:'Game deletado com sucesso'})
+          } else {
+            res.status(500).send({message: err.message})
+          }
+    })
 }
 
 module.exports = {
@@ -113,6 +62,5 @@ module.exports = {
     idGames,
     addGames,
     updateGames,
-    likedGames,
     deleteGames
 }
