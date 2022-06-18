@@ -47,7 +47,7 @@ const deletePet = (req, res) => {
 
     pets.findByIdAndDelete(idRequest, (err) => {
         if(!err) {
-            res.status(200).send({message: 'Livro deletado com sucesso'})        
+            res.status(200).send({message: 'Petshop deletado com sucesso'})        
         } else {
             res.status(500).send({message: err.message})
         }
