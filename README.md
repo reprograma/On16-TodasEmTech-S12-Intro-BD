@@ -9,6 +9,15 @@ APIs REST com integração ao banco de dados MongoDB, utilizando as plataformas 
 
 <br>
 
+<!--ts-->
+- [ :books: Books ](#️-Books)
+- [ :video_game: API Games ](#️-Games)
+- [ :mage_woman: Iniciando a API Nodejs ](#️-Iniciando-a-API-Nodejs)
+- [ :zap: Tecnologias ](#️-Tecnologias)
+<!--te-->
+
+<br>
+
 > ## Books 	:books:
 
 API com uma biblioteca de livros, onde tem dados sobre os livros, e utilizando o CRUD para pesquisar os livros por id, inserir novos livros para a biblioteca, remover o que não queremos mais e modificar seus dados. 
@@ -16,15 +25,13 @@ API com uma biblioteca de livros, onde tem dados sobre os livros, e utilizando o
 ### :game_die: `Dados`
 
 ```
-{
-      "id": 19,
-      "title": "Hold My Hand",
-      "launchYear": "2022",
-      "favorited": true,
-      "artists": [
-          "Lady Gaga"
-       ]
-}
+    {
+        "_id": "62ad4cb77d4e4e409003c4e8",
+        "title": "Mulheres que correm com os lobos",
+        "author": "Clarissa Pinkola Estés",
+        "publishingCompany": "Rocco",
+        "pagesFromBook": 576
+    }
 ```
 
 ### :warning: `CRUD` :warning:
@@ -33,14 +40,14 @@ API com uma biblioteca de livros, onde tem dados sobre os livros, e utilizando o
 
 | Verbo  | Descrição da Rota                      | Descrição da Rota                      |
 | ------ | ---------------------------------------| ---------------------------------------|
-| GET    | Listar todos os livros                 | Descrição da Rota                      |
-| GET    | Listar um livro específico             | Descrição da Rota                      |
-| POST   | Adicionar novo livro                   | Descrição da Rota                      |
-| PUT    | Alterar informações do livro           | Descrição da Rota                      |
-| PATCH  | Alterar numeros de pagina do livro     | Descrição da Rota                      |
-| DELETE | Remover livro                          | Descrição da Rota                      |
+| GET    | Listar todos os livros                 | localhost:1313/books/                  |
+| GET    | Listar um livro específico             | localhost:1313/books/:id               |
+| POST   | Adicionar novo livro                   | localhost:1313/books/                  |
+| PUT    | Alterar informações do livro           | localhost:1313/books/:id               |
+| PATCH  | Alterar numeros de pagina do livro     | localhost:1313/books/:id               |
+| DELETE | Remover livro                          | localhost:1313/books/:id               |
 
-[Musics prints Postman | terminal](src/../reprogramafy/src/musicasREADME.md)
+[Books prints Postman | terminal](books-API-DB/booksREADME.md)
 
 
 ### :triangular_ruler: `Arquitetura` 
@@ -81,15 +88,16 @@ API com uma glossário gamer, onde tem dados sobre os games, e utilizando o CRUD
 ### :game_die: `Dados`
 
 ```
-{
-      "id": 19,
-      "title": "Hold My Hand",
-      "launchYear": "2022",
-      "favorited": true,
-      "artists": [
-          "Lady Gaga"
-       ]
-}
+    {
+        "_id": "62acbd25ed2e14eb1e42b1a2",
+        "title": "The Sims 4",
+        "launchYear": 2014,
+        "consoles": [
+            "PlayStation® 4",
+            "Xbox One"
+        ],
+        "liked": true
+    }
 ```
 
 ### :warning: `CRUD` :warning:
@@ -98,14 +106,14 @@ API com uma glossário gamer, onde tem dados sobre os games, e utilizando o CRUD
 
 | Verbo  | Descrição da Rota                      | Descrição da Rota                      |
 | ------ | ---------------------------------------| ---------------------------------------|
-| GET    | Listar todos os games                  | Descrição da Rota                      |
-| GET    | Listar um game específico              | Descrição da Rota                      |
-| POST   | Adicionar novo game                    | Descrição da Rota                      |
-| PUT    | Alterar informações do game            | Descrição da Rota                      |
-| PATCH  | Favoritar/desfavoritar um game         | Descrição da Rota                      |
-| DELETE | Remover game                           | Descrição da Rota                      |
+| GET    | Listar todos os games                  | localhost:1313/games/                  |
+| GET    | Listar um game específico              | localhost:1313/games/:id               |
+| POST   | Adicionar novo game                    | localhost:1313/games/                  |
+| PUT    | Alterar informações do game            | localhost:1313/games/:id               |
+| PATCH  | Favoritar/desfavoritar um game         | localhost:1313/games/:id               |
+| DELETE | Remover game                           | localhost:1313/games/:id               |
 
-[Musics prints Postman | terminal](src/../reprogramafy/src/musicasREADME.md)
+[Games prints Postman | terminal](games-API-BD/gamesREADME.md)
 
 
 ### :triangular_ruler: `Arquitetura` 
@@ -158,7 +166,7 @@ API com uma glossário gamer, onde tem dados sobre os games, e utilizando o CRUD
 
 <br>
 
-> ## :zap: `Tecnologias`
+> ## :zap: Tecnologias
 </br>
 
 | Ferramenta | Descrição |
@@ -181,7 +189,7 @@ API com uma glossário gamer, onde tem dados sobre os games, e utilizando o CRUD
 ----
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/84551213/171315925-9e44d438-7b33-4301-b420-7f5da30a7531.gif" width= "400px"/>
+  <img src="https://user-images.githubusercontent.com/84551213/174421374-9176f37c-abd3-4e97-b830-d3d7f51f297c.gif" width= "400px"/>
 </p>
 
 <p align="center">
