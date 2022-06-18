@@ -9,15 +9,6 @@ APIs REST com integração ao banco de dados MongoDB, utilizando as plataformas 
 
 <br>
 
-<!--ts-->
-- [ :books: Books ](#️-books)
-- [ :video_game: API Games ](#️-games)
-- [ :mage_woman: Iniciando a API Nodejs ](#️-iniciando-a-api-nodejs)
-- [ :zap: Tecnologias ](#️-tecnologias)
-<!--te-->
-
-<br>
-
 > ## Books 	:books:
 
 API com uma biblioteca de livros, onde tem dados sobre os livros, e utilizando o CRUD para pesquisar os livros por id, inserir novos livros para a biblioteca, remover o que não queremos mais e modificar seus dados. 
