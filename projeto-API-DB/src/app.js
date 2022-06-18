@@ -24,7 +24,7 @@ app.use(function (req, res, next) {
 })
 
 app.use("/", index);
-app.use("/livros", livros);
+app.use("/livros", livros); //Rota geral
 
 //Conexão da aula de monitoria. Que deu certo.
 db.connect()
