@@ -1,7 +1,8 @@
 <h1 align="center"> Games 	:video_game: </h1> <br>
 
 
-> [controller](src/controllers/gamesController.js)  | 
+> [config](src/config/dbConnect.js)  |
+[controller](src/controllers/gamesController.js)  | 
 [models](src/models/games.js)  |
 [routes](src/routes) |
 [app](src/app.js) |
