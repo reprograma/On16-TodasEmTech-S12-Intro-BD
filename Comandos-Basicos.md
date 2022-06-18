@@ -1,7 +1,6 @@
-### Executando comandos no MongoDB Shell
+### Executando comandos no MongoDB Shell e Robo 3T(robomongo)
 
-Agora que você já ativou o Mongo Shell, é possível criar coleções e manipular os objetos direto do banco de dados através do terminal. 
-Para ter acesso a outros comandos do MongoDB Shell, clique no link para acessar a documentação dos [comandos básicos MongoDB](https://www.mongodb.com/docs/manual/crud/)
+Agora que você já ativou o Mongo Shell ou o [Robo 3T](https://robomongo.org/), é possível criar coleções e manipular os objetos direto do banco de dados através do terminal. Para ter acesso a outros comandos do MongoDB Shell, clique no link para acessar a documentação dos [comandos básicos MongoDB](https://www.mongodb.com/docs/manual/crud/)
 
 
 Vamos aprender alguns comandos?
