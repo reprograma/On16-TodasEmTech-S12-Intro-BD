@@ -1,58 +1,54 @@
 <h1 align="center"> Books 	:books: </h1> <br>
 
 
-> [controller](src/../reprogramafy/src/controller/../../../controller/musicasController.js)  | 
-[models](src/../reprogramafy/src/models/../../../models/musicas.json)  | 
-[routes](src/../reprogramafy/src/routes/../../../routes/musicasRoutes.js) |
-[app](src/../reprogramafy/src/../../app.js) |
-[server](src/../reprogramafy/../../server.js)
+> [config](src/config/dbConnect.js)  |
+[controller](src/controllers/booksController.js)  | 
+[models](src/models/books.js)  | 
+[routes](src/routes) |
+[app](src/app.js) |
+[server](books/server.js) |
 
 <br>
 
 ### :zap: *Postman*
 <br>
 
-- [x]  **`GET`** Rota listar todas as músicas da playlist do usuário | `localhost:1313/playlist/musics`;
+- [x]  **`GET`** Rota Listar todos os livros | `localhost:1313/books/ `;
 
 <p>
-  <img width="300" src="https://user-images.githubusercontent.com/84551213/171423798-742902dd-e036-4222-83cb-0b6e31b4fee6.png" />
+  <img width="300" src="https://user-images.githubusercontent.com/84551213/174422237-34d2e3db-f120-4c05-9727-6354c33e3c44.png" />
 <br>
  
- - [x]  **`GET`** Rota listar apenas uma música específica | `localhost:1313/playlist/musics/18`;
+ - [x]  **`GET`** Rota Listar um livro específico | `localhost:1313/books/62ad4d437d4e4e409003c4ee`;
 
 <p>
-  <img width="300" src="https://user-images.githubusercontent.com/84551213/171423801-a2101a02-6cdd-44ac-9ce7-9fafbd4d9ce8.png" />
+  <img width="300" src="https://user-images.githubusercontent.com/84551213/174422238-2ebe2e12-557a-4129-aba1-72e995f9de6a.png" />
 <br>
  
- - [x]  **`GET`** Rota listar  músicas de um artista específico | `localhost:1313/playlist/search/artists?artists=Pablo Vittar`;
+- [x]  **`POST`** Rota Adicionar novo livro | `localhost:1313/books/`;
 
 <p>
-  <img width="300" src="https://user-images.githubusercontent.com/84551213/171423804-54ea5617-710b-4012-b38b-08cb26f195f6.png" />
+  <img width="300" src="https://user-images.githubusercontent.com/84551213/174422240-37bd93d1-9517-4ba6-9086-1fdef85856af.png" />
 <br>
  
-- [x]  **`POST`** Rota adicionar uma nova música | `localhost:1313/playlist/add`;
+- [x]  **`PUT`** Rota Alterar informações do livro | `localhost:1313/books/62ad4cb77d4e4e409003c4e8`;
 
 <p>
-  <img width="300" src="https://user-images.githubusercontent.com/84551213/171423807-1f5ee33b-61cf-465e-8eaf-321c1580736c.png" />
+  <img width="300" src="https://user-images.githubusercontent.com/84551213/174422241-1f2ca8e0-807f-4163-a067-0ccc782bd0fd.png" />
 <br>
- 
-- [x]  **`PUT`** Rota alterar informações da música | `localhost:1313/playlist/change/19`;
+
+- [x]  **`PATCH`** Rota Alterar numeros de pagina do livro | `localhost:1313/books/62ad4cb77d4e4e409003c4e8`;
 
 <p>
-  <img width="300" src="https://user-images.githubusercontent.com/84551213/171423810-2d7723b5-2eac-46c5-981a-2fe7fd51fa11.png" />
+  <img width="300" src="https://user-images.githubusercontent.com/84551213/174422239-b55220ae-2826-4806-a12f-eb395d704027.png" />
 <br>
 
-- [x]  **`DELETE`** Rota remover uma música da lista | `localhost:1313/playlist/delete/16`;
+- [x]  **`DELETE`** Rota Remover livro | `localhost:1313/books/62ad4cb77d4e4e409003c4e8`;
 
 <p>
-  <img width="300" src="https://user-images.githubusercontent.com/84551213/171542813-f71644e8-9f8c-4219-8806-6057885a155f.png" />
+  <img width="300" src="https://user-images.githubusercontent.com/84551213/174422236-6b35d078-7296-47e0-bec0-80e6a5ee61a5.png" />
 <br>
 
-- [x]  **`PATCH`** favoritar/desfavoritar uma música | `localhost:1313/playlist/update/2`;
-
-<p>
-  <img width="300" src="https://user-images.githubusercontent.com/84551213/171424559-28a86c93-293b-42d4-a2f6-77acd687afc0.png" />
-<br>
 
 ### :slot_machine: *Terminal* 
 <br>
@@ -60,7 +56,7 @@
 - [x]  **`Terminal`** Tem que aparecer essa mensagem do `console.log`.
 
 <p>
-  <img width="300" src="https://user-images.githubusercontent.com/84551213/171425835-453b4670-0a55-4962-a964-bafd01c2c0a8.png" />
+  <img width="300" src="https://user-images.githubusercontent.com/84551213/174422242-9de01204-0635-441b-848d-0b9b25f914e6.png" />
 <br>
 
 
@@ -68,5 +64,5 @@
 ----
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/84551213/171322436-c7d002ec-d7bb-488c-aded-6d54000387d8.gif" width= "400px"/>
+  <img src="https://user-images.githubusercontent.com/84551213/174422311-b83632ab-1f28-4f0c-8915-bdb07fcb5921.gif" width= "400px"/>
 </p>
