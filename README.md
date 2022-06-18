@@ -111,11 +111,14 @@ A interface é um CRUD, onde é possível listar os games no banco de dados; lis
  <img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C4E03AQFUFLABHg5xfA/profile-displayphoto-shrink_800_800/0/1646500768370?e=1659571200&v=beta&t=ZeyR8RdmYcjcC_Mfr83iTLwkrQT3MR74QzceWIdbWfI" width="100px;" alt="Foto de Perfil de Andreza"/>
  <br/>
 </a>
+</p>
 
-<align="center">
-Desenvolvido por [![Linkedin Badge](https://img.shields.io/badge/-Andreza_Pipolo-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/andrezapipolo/)](https://www.linkedin.com/in/andrezapipolo/)  com o apoio das amigas 💙
+<p align="center">
 
- 
-<img src="https://user-images.githubusercontent.com/84551213/171416454-ab93ab7f-e5a0-4276-81ec-4f5cb79dff31.png" alt="logo da reprograma" border="0" width = "200" />
-</p></p> <p align="center"></p>
+Desenvolvido por [![Linkedin Badge](https://img.shields.io/badge/-Andreza_Pipolo-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/andrezapipolo/)](https://www.linkedin.com/in/andrezapipolo/)  com o apoio das amigas 💙</p>
+
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/84551213/171416454-ab93ab7f-e5a0-4276-81ec-4f5cb79dff31.png" alt="logo da reprograma" border="0" width = "200" /> <p align="center"></p>
+
 
