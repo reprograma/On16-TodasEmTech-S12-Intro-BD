@@ -10,10 +10,10 @@ APIs REST com integração ao banco de dados MongoDB, utilizando as plataformas 
 <br>
 
 <!--ts-->
-- [ :books: Books ](#️-Books)
-- [ :video_game: API Games ](#️-Games)
-- [ :mage_woman: Iniciando a API Nodejs ](#️-Iniciando-a-API-Nodejs)
-- [ :zap: Tecnologias ](#️-Tecnologias)
+- [ :books: Books ](#️-books)
+- [ :video_game: API Games ](#️-games)
+- [ :mage_woman: Iniciando a API Nodejs ](#️-iniciando-a-api-nodejs)
+- [ :zap: Tecnologias ](#️-tecnologias)
 <!--te-->
 
 <br>
