@@ -11,7 +11,7 @@ use <nome-do-database>
 ```
 
 - Para mostrar todos os bancos de dados ativos:
-``` 
+```
 show dbs
 ```
 
@@ -20,10 +20,9 @@ show dbs
 db.createNome-da-collection
 ```
 
-
 - Para mostrar todas as collections (só mostra se tiver inserido algum registro na collection):
 ```
-show collections 
+show collections
 ```
 
 - Para inserir um novo registro dentro da collection no banco de dados:
