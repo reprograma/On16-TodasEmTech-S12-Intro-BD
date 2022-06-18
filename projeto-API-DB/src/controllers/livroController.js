@@ -3,7 +3,7 @@ const livros = require ("../models/livros.js");
 const getAllLivros = (req, res) => {
   livros.find((err, livros) => {
     res.status(200).json(livros);
-  })  
+  })
 };
 
 const getLivros = (req, res) => {
