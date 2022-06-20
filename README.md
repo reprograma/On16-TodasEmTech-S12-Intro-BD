@@ -2,7 +2,7 @@
 
 Olá, sejam bem-vindas a aula de banco de dados e integração! Meu nome é Tereza Oliveira (@Tereza25), e irei acompanhar vocês nessa semana.
 
-CLique [aqui](https://github.com/reprograma/On16-TodasEmTech-S12-Intro-BD/blob/main/material%20aula/Banco%20de%20dados%20e%20Integra%C3%A7%C3%A3o%20-%20reprograma.pdf) para cessar o material da aula. 
+Clique [aqui](https://github.com/reprograma/On16-TodasEmTech-S12-Intro-BD/blob/main/material%20aula/Banco%20de%20dados%20e%20Integra%C3%A7%C3%A3o%20-%20reprograma.pdf) para acessar o material da aula. 
 
 ### Vamos preparar o ambiente!
 
