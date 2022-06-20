@@ -2,6 +2,8 @@
 
 Olá, sejam bem-vindas a aula de banco de dados e integração! Meu nome é Tereza Oliveira (@Tereza25), e irei acompanhar vocês nessa semana.
 
+CLique (aqui)[https://github.com/reprograma/On16-TodasEmTech-S12-Intro-BD/blob/main/material%20aula/Banco%20de%20dados%20e%20Integra%C3%A7%C3%A3o%20-%20reprograma.pdf] para cessar o material da aula. 
+
 ### Vamos preparar o ambiente!
 
 
@@ -57,7 +59,7 @@ mongoose.connect( “COLE-AQUI-STRING-DE-CONEXÃO”)
 
 **ATENÇÃO! Não esqueça de alterar o campo password para incluir a senha do database que você criou e incluir o nome do database no final da string de conexão..**
 
-Ainda no arquivo `dbConnect.js`, vamos declarar uma variável let chamada `db` e atribuir o valor `mongoose.connect`, finalizamos com a exportação da variável recém declarada.
+Ainda no arquivo `dbConnect.js`, vamos declarar uma variável let chamada `db` e atribuir o valor `mongoose.connection`, finalizamos com a exportação da variável recém declarada.
 
 
 ```js
