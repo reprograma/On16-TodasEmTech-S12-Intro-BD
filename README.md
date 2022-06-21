@@ -24,7 +24,7 @@ Para executar este projeto, você deverá ter instalado o Node.js e as dependên
 Seguiremos a ordem de instalações no terminal:
 
 - Clone o projeto através do comando:
-`$git clone https://github.com/louicosta/On16-TodasEmTech-S11-API-Revisao`
+`$git clone https://github.com/andrezapipolo/On16-TodasEmTech-S11-API-Revisao`
 - ` npm init`
 - ` npm install express `
 - ` npm install nodemon `
