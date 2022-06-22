@@ -1,6 +1,6 @@
 const mongoose = require ("mongoose");
 
-mongoose.connect("mongodb+srv://GaiaMaria8:@cluster0.btpmh.mongodb.net/reprograma");
+mongoose.connect(process.env.ADMIN_ID);
 
 let db = mongoose.connection;
 
