@@ -1,15 +1,14 @@
 const express = require ("express");
 const index = require ("./router/index.js"); 
 const games = require ("./router/games.js");
-const db = require ("./config/dbConnect");
-
-db.on("error", console.log.bind(console, 'Erro de conexão'))
-db.once("open", () => {
-    console.log('Conexão com o banco feita com sucesso')
-});
-
+const mongoose = require ("./config/dbConnect");
+require("dotenv").config()
 
 const app = express();
+
+app.use(express.json());
+mongoose.connect()
+
 
 app.use(express.json());
 
