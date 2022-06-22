@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-   "start": "nodemon server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/reprograma/On16-TodasEmTech-S12-Intro-BD#readme",
   "devDependencies": {
+    "dotenv": "^16.0.1",
     "nodemon": "^2.0.16"
   },
   "dependencies": {

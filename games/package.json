@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/louicosta/On16-TodasEmTech-S12-Intro-BD/issues"
   },
-  "homepage": "https://github.com/louicosta/On16-TodasEmTech-S12-Intro-BD#readme"
+  "homepage": "https://github.com/louicosta/On16-TodasEmTech-S12-Intro-BD#readme",
+  "devDependencies": {
+    "dotenv": "^16.0.1"
+  }
 }
