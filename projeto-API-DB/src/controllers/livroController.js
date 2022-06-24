@@ -1,8 +1,8 @@
 const livros = require ("../models/livros.js");
-
+// refatorar utilizando dois parametros err e status 200
 const getAllLivros = (req, res) => {
   livros.find((err, livros) => {
-    res.status(200).json(livros);
+    res.status(200).send(livros);
   })  
 };
 
@@ -24,7 +24,7 @@ const createLivros =  (req, res) => {
 
   livro.save((err) => {
     if(err) {
-      res.status(500).send({message: `${err.message} - falha ao cadastrar livro`})
+      res.status(500).send({message: `${err.message} - Atenção!!! falha ao cadastrar livro`})
     } else {
       res.status(201).send(livro.toJSON())
     }
@@ -37,7 +37,7 @@ const updateLivros =  (req, res) => {
 
   livros.findByIdAndUpdate(id, {$set: req.body}, (err) => {
     if(!err) {
-      res.status(200).send({message:'Livro atualizado com sucesso'})
+      res.status(200).send({message:' Até que enfim o Livro foi atualizado com sucesso'})
     } else {
       res.status(500).send({message: err.message})
     }
@@ -49,7 +49,7 @@ const deleteLivros =  (req, res) => {
   
   livros.findByIdAndDelete(id, (err) => {
     if(!err) {
-      res.status(200).send({message:'Livro deletado com sucesso'})
+      res.status(200).send({message:'Querida o Livro deletado com sucesso'})
     } else {
       res.status(500).send({message: err.message})
     }
