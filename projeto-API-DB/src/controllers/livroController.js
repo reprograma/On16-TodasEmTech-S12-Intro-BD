@@ -1,38 +1,59 @@
-const livros = require ("../models/livros");
-const fs = require ("fs");
+const livros = require ("../models/livros.js");
+
 
 const getAllLivros = (req, res) => {
-  res.status(200).send(livros);
+  livros.find((err, livros) => {
+    res.status(200).json(livros);
+  })
 };
 
 const getLivros =  (req, res) => {
-  let index = buscaLivro(req.params.id);
-  res.status(200).send(livros[index]);
-};
+  const id = req.params.id;
 
+  livros.findById(id, (err, livros) => {
+   if(err) {
+    res.status(400).send({message: `${err.message} - id do livro não foi encontrada`})
+   } else {
+    res.status(200).send(livros);
+     }
+  })
+}
+
+ 
 const createLivros =  (req, res) => {
-  livros.push(req.body);
-  res.status(201).send("Livro foi cadastrado com sucesso");
+  let livro = new livros(req.body);
+  livros.save((err) => {
+    if(err) {
+      res.status(500).send({message: `${err.message} - falha ao cadastrar o livro`})
+    } else {
+      res.status(201).send(livro.toJSON())
+    }
+  })
 };
 
 const updateLivros =  (req, res) => {
-  let index = buscaLivro(req.params.id);
-  livros[index].titulo = req.body.titulo;
-  res.json(livros);
+  const id = req.params.id;
+
+  livros.findByIdAndUpdate(id, {$set: req.body}, (err) => {
+    if(!err) {
+      res.status(200).send({message: 'livro atualizado com sucesso'})
+    } else {
+      res.status(500).send({ message: err.message})
+    }
+  })
 };
 
 const deleteLivros =  (req, res) => {
-  let { id } = req.params;
-  let index = buscaLivro(id);
-  livros.splice(index, 1);
-  res.send(`Livro ${id} removido com sucesso`);
+ const id = req.params.id;
+
+  livros.findByIdAndDelete(id, (err) => {
+    if(!err) {
+      res.status(200).send({ message: 'Livro deletado com sucesso'})
+    } else {
+      res.status(500).send({message: err.message})
+    }
+  })
 };
-
-
-function buscaLivro(id) {
-  return livros.findIndex((livro) => livro.id == id);
-}
-
 
 module.exports = {
     getAllLivros,
