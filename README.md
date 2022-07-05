@@ -1,4 +1,4 @@
-# On16-TodasEmTech-S12-Intro-BD
+Turma Online 16 - Back-end |Reprograma - Semana 12 - INTRO BD
 
 Olá, sejam bem-vindas a aula de banco de dados e integração! Meu nome é Tereza Oliveira (@Tereza25), e irei acompanhar vocês nessa semana.
 
