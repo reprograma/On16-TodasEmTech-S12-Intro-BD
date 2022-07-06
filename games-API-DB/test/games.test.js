@@ -16,6 +16,6 @@ describe('Testes do modelo Games', () => {
     it('Deve salvar um novo game no banco de dados', () => {
         game.save().then((dados) => {
             expect(dados.title).toBe('Far Cry 3')
-        })
+        }) // teste para requisição POST
     })
 })
