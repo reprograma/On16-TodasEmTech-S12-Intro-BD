@@ -1,6 +1,6 @@
 const express = require('express')
 const db = require ("./config/dbConnect.js")
-const gamesRoutes = require('./router/gamesRoutes.js')
+const gamesRoutes = require('./routes/gamesRoutes.js')
 
 db.on("error", console.log.bind(console, 'Erro de conexão'))
 db.once("open", () => {
