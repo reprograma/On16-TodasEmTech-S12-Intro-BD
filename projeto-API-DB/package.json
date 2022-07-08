@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:watch": "jest --watchAll",
     "start": "nodemon server.js"
   },
   "repository": {
@@ -18,10 +18,14 @@
   },
   "homepage": "https://github.com/reprograma/On16-TodasEmTech-S12-Intro-BD#readme",
   "devDependencies": {
+    "eslint": "^8.19.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "nodemon": "^2.0.15"
   },
   "dependencies": {
     "express": "^4.17.3",
+    "jest": "28.1.0",
     "mongoose": "^6.3.6"
   },
   "description": ""
