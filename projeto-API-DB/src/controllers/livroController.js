@@ -1,13 +1,14 @@
 const livros = require ("../models/livros.js");
-const fs = require ("fs");
+
 
 const getAllLivros = (req, res) => {
-livros.find((err, livros) => {
-  res.status(200).send(livros);
-})
-  
+  livros.find((err, livros) => {
+    if(err) {
+    res.status(500).send({ message: `${err.message} - deu erro do teu lado`});
+    }
+    else { res.status(200).json(livros); }
+  })  
 };
-
 
 
 const getLivros =  (req, res) => {
@@ -48,6 +49,20 @@ const updateLivros =  (req, res) => {
   })
   
 };
+
+//patch!
+const updatePagesFromBooks = (req, res) => {
+  const id = req.params.id;
+  const {numeroPaginas} = req.body; // vou ta instanciando.
+
+  livros.findByIdAndUpdate(id,{$set:{numeroPaginas}},(err) =>{ // instancio coisa específica q é o num d paginas
+    if(!err){
+      res.status(200).send({message:"mudou o babado!"})
+    }else{
+      res.status(500).send({message:"não mudou nada querida"})
+    }
+  })
+}
 
 const deleteLivros =  (req, res) => {
   const id = req.params.id;
