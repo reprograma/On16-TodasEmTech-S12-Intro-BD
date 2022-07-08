@@ -191,3 +191,14 @@ Desenvolvido por Camila Ribeiro, com o apoio das AMIGUES. :purple_heart:
 <img src="https://user-images.githubusercontent.com/84551213/171416454-ab93ab7f-e5a0-4276-81ec-4f5cb79dff31.png" alt="logo da reprograma" border="0" width = "200" />
 
 </p>
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+<p align="center"> Desenvolvido por <a href="https://www.linkedin.com/in/andrezapipolo" target="_blank"><img src="https://img.shields.io/badge/-Andreza_Pipolo-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/andrezapipolo" target="_blank"></a>  com o apoio das amigas 💙
+</p>
+
