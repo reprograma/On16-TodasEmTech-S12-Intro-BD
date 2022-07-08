@@ -7,7 +7,7 @@ const connect = async() => {
       useUnifiedTopology: true
      })
 
-     console.log('banco conectado! ')
+     console.log('banco conectado!')
    } catch (error) {
     console.error(error)
    }
