@@ -4,22 +4,29 @@
   "description": "API based on S11 of Reprograma, now included with database MongoDB",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:watch": "jest --watchAll",
     "start": "nodemon server.js"
   },
-  "author": "Louise Costa",
+  "author": "Andreza Pipolo",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",
+    "jest": "^28.1.2",
     "mongoose": "^6.4.0",
     "nodemon": "^2.0.16"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/louicosta/On16-TodasEmTech-S12-Intro-BD.git"
+    "url": "git+https://github.com/andrezapipolo/On16-TodasEmTech-S12-Intro-BD.git"
   },
   "bugs": {
-    "url": "https://github.com/louicosta/On16-TodasEmTech-S12-Intro-BD/issues"
+    "url": "https://github.com/andrezapipolo/On16-TodasEmTech-S12-Intro-BD/issues"
   },
-  "homepage": "https://github.com/louicosta/On16-TodasEmTech-S12-Intro-BD#readme"
+  "homepage": "https://github.com/andrezapipolo/On16-TodasEmTech-S12-Intro-BD#readme",
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "eslint": "^8.19.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
 }

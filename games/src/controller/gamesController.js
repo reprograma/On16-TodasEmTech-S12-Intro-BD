@@ -77,5 +77,5 @@ module.exports = {
   addGame,
   changeGame,
   deleteGame,
-  updateGame,
+  updateGame
 };

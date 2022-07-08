@@ -1,7 +1,18 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
-mongoose.connect('mongodb+srv://andrezapipolo:Shurim88@cluster0.ahda7mk.mongodb.net/games');
+const connect = async() => {
+   try {
+     await mongoose.connect(process.env.ADMIN_ID, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+     })
 
-let db = mongoose.connection;
+     console.log('banco conectado!')
+   } catch (error) {
+    console.error(error)
+   }
+}
 
-module.exports = db;
+module.exports = {
+  connect
+}
