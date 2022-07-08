@@ -1,4 +1,4 @@
-const app  = require ("./games/src/app");
+const app = require('./src/app');
 
 const port = 4000
 
