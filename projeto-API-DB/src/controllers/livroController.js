@@ -11,7 +11,7 @@ const getLivros = (req, res) => {
 
   livros.findById(id, (err, livros) => {
     if(err) {
-      res.status(400).send({message: `${err.message} - id do livro não encontrado`})
+      res.status(400).send({message: `${err.message} - Infelizmente o id do livro não encontrado`})
     } else {
       res.status(200).send(livros);
     }
@@ -49,7 +49,7 @@ const deleteLivros =  (req, res) => {
   
   livros.findByIdAndDelete(id, (err) => {
     if(!err) {
-      res.status(200).send({message:'Querida o Livro deletado com sucesso'})
+      res.status(200).send({message:'Querida o Livro foi deletado com sucesso'})
     } else {
       res.status(500).send({message: err.message})
     }

@@ -1,13 +1,15 @@
 const express = require ("express");
 const index = require ("./routes/index.js"); 
 const livros = require ("./routes/livros.js");
-const db = require ("./config/dbConnect.js");
+const db = require ("./config/dbConnect.js");// adicionou a rota do dbConnect.js
 
-// aqui criou uma sintaxe - obs: foi utilizada dois parametros uma palavra reservada error  e o bind
-db.on("error", console.log.bind(console, 'Erro de conexão')) // db.on informa o erro 
- // db.once informa a conexao com BD com Sucesso
+//db esta vindo do arquivo dbConnect.js
+// aqui criou uma sintaxe - obs: foi utilizada dois parâmetros uma palavra reservada error  e o bind é usada na conexão como banco de dados.
+db.on("error", console.log.bind(console, 'Erro de conexão')) /* db.on  é um método, error e uma palavra reservada é um parâmetro, bind recebe outro parametro */
+
+ // db.once é um método informa a conexão com BD com Sucesso
 db.once("open", () => {
-    console.log('Garota a sua Conexão com o banco feita realizada com SUCESSO')
+    console.log('Conexão com o banco feita realizada com SUCESSO')
 })
 
 

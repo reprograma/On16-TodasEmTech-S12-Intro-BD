@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+//criou a função schema
 const livroSchema = new mongoose.Schema({
   id: { type: String },
   titulo: { type: String, required: true },
@@ -8,7 +8,7 @@ const livroSchema = new mongoose.Schema({
   numeroPaginas: { type: Number, required: true },
 });
 
-
+//variavel para conexao do mongoose com os parametros livros que e a variavel e o schema
 const livros = mongoose.model('livros', livroSchema);
 
 module.exports = livros;
