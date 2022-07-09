@@ -192,13 +192,3 @@ Desenvolvido por Camila Ribeiro, com o apoio das AMIGUES. :purple_heart:
 
 </p>
 
-
-
-<br>
-<br>
-<br>
-<br>
-
-<p align="center"> Desenvolvido por <a href="https://www.linkedin.com/in/andrezapipolo" target="_blank"><img src="https://img.shields.io/badge/-Andreza_Pipolo-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/andrezapipolo" target="_blank"></a>  com o apoio das amigas 💙
-</p>
-
