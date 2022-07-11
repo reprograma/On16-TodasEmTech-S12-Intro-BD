@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/reprograma/On16-TodasEmTech-S12-Intro-BD#readme",
   "devDependencies": {
-    "eslint": "^8.19.0",
+    "eslint": "8.16.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
     "jest": "28.1.0",
