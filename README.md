@@ -12,7 +12,7 @@
 #### O que aprendi 🛰️
 
 * Biblioteca mongoose;
-* 
+ 
 
 #### Qual a diferença entre DADOS & INFORMAÇÕES?
 - Dados podem ser qualquer contéudo p.exemplo: números, valores, medições, cpf, horários, localidade etc... Estes contéudos por si só não tem nenhum valor agregado, não se consegue tomar nenhuma decisão ou mesmo orientação.
