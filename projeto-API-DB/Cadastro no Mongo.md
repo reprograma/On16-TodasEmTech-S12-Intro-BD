@@ -1,1 +1,0 @@
-Neste projeto iremos utilizar a GUI MongoDB Atlas para gerenciar nosso banco de dados, será necessário fazer o cadastro no site oficial [MongoDB Atlas](https://www.mongodb.com/atlas/database), cadastrar um usuário e optar pela modalidade shared(pública) com o provedor de sua escolha. 

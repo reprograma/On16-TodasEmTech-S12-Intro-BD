@@ -1,4 +1,5 @@
 const livros = require ("../models/livros.js");
+const fs = require("fs");
 // refatorar utilizando dois parametros err, livros
 const getAllLivros = (req, res) => {
   livros.find((err, livros) => {
