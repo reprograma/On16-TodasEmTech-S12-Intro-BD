@@ -1,16 +1,18 @@
-const mongoose = require ('mongoose')
+const mongoose = require("mongoose");
 
-const filmesSchema = new mongoose.Schema({
-    id: { type: String },
-    titulo: { type: String, required: true },
-    autor: { type: String, required: true },
-    editora: { type: String, required: true },
-    numeroPaginas: { type: Number, required: true },
-  });
+const filmeSchema = new mongoose.Schema({
+  "id": {type: String},
+  "titulo":{ type: String, required: true },
+  "diretor": { type: String, required: true },
+  "produtor": { type: String, required: true },
+  "data de lancamento": { type: Number, required: true },
+  "duracao": { type: Number, required: true },
   
-  
-  const filmes = mongoose.model('filmes', filmesSchema);
-  
-  module.exports = filmes;
+})
+
+const filme = mongoose.model('filmes', filmeSchema);
+
+  module.exports = filme;
+
 
 
