@@ -1,12 +1,20 @@
-// importando mongoose
-const mongoose = require("mongoose")
-// outra opção é importar com import
-// import mongoose from "mongoose";
-//  conectando mangoose com o link do mongodb
-mongoose.connect("")
+// usar mongoose
+const mongoose = require('mongoose')
 
-// pra poder exportar a conecção, gravo ela numa variavel e 
-let db = mongoose.connection
+// função de conexao com banco 
+const connect = async() => {
+    try {
+        await mongoose.connect(process.env.DB_URI, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        })
+        console.log('Banco Conectado!')
+    }  catch (error) {
+        console.log(error)
+    }
+}
 
-// exporta
-module.exports = db
+
+module.exports = {
+    connect,
+}

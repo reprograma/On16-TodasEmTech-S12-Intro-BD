@@ -1,16 +1,14 @@
-const express = require ("express");
-const index = require ("./routes/index.js"); 
-const livros = require ("./routes/livros.js");
-//invoco o dv de /config
-const db = require('./config/dbConnect')
-// uso metodo on para notificar em caso de erro
-db.on("error", console.log.bind(console, 'Erro de conexão'))
-// quando a conexão funciona, me indica no terminal
-db.once("open", () => {
-    console.log('Conexão estabelecida com sucesso')
-}) 
+const express = require('express')
+const index = require('./routes/index.js')
+const series = require('./routes/seriesRoutes.js')
+const mongoose = require ("./config/dbConnect");
+require("dotenv").config()
 
 const app = express();
+
+app.use(express.json());
+mongoose.connect()
+
 
 app.use(express.json());
 
@@ -22,8 +20,8 @@ app.use(function (req, res, next) {
     )
     next()
 })
-
 app.use("/", index);
-app.use("/livros", livros);
+app.use('/series', series)
 
 module.exports = app;
+
