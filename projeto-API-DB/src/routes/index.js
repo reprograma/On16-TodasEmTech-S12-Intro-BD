@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.get("/", function (req, res) {
     res.status(200).send({
-        title: "Reprograma - On16 Semana 12 - Intro - BD",
+        title: "Entrega - On16 Semana 12 - Intro - BD",
         version: "1.0.0"
     })
 });
