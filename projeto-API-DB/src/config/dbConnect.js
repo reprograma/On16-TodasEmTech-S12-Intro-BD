@@ -1,10 +1,6 @@
 const mongoose = require ("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/Reprograma", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-
+mongoose.connect("mongodb+srv://mmarimonteiro:<password>@cluster0.amlli.mongodb.net/reprograma");
 
 let db = mongoose.connection;
 
