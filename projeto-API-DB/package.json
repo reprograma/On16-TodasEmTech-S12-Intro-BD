@@ -1,7 +1,6 @@
 {
   "name": "on16-todasemtech-s12-intro-bd",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
@@ -30,5 +29,9 @@
     "jest": "^28.1.2",
     "mongoose": "^6.3.6",
     "supertest": "^6.2.4"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "description": ""
 }
