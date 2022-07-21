@@ -1,11 +1,8 @@
 const mongoose = require("mongoose"); // importe o mongoose
 //connect para receber o string de conexao do mongoDB Atlas
 mongoose.connect(
-
-  "mongodb+srv://piresnilva:sofmeL2012@cluster0.7rbouil.mongodb.net/reprograma",
+  "mongodb+srv://piresnilva:<password>@cluster0.7rbouil.mongodb.net/reprograma",
   {
-
-
     useNewUrlParser: true,
     useUnifiedTopology: true,
   }
