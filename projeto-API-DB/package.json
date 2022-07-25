@@ -1,28 +1,26 @@
 {
-  "name": "on16-todasemtech-s12-intro-bd",
+  "name": "projeto-api-db",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "test:watch": "jest --watchAll"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/reprograma/On16-TodasEmTech-S12-Intro-BD.git"
-  },
-  "keywords": [],
-  "author": "",
+  "author": "Dayse",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/reprograma/On16-TodasEmTech-S12-Intro-BD/issues"
-  },
-  "homepage": "https://github.com/reprograma/On16-TodasEmTech-S12-Intro-BD#readme",
-  "devDependencies": {
-    "nodemon": "^2.0.15"
-  },
   "dependencies": {
-    "express": "^4.17.3",
-    "mongoose": "^6.3.6"
+    "@jest/globals": "^28.1.3",
+    "eslint": "^8.20.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "express": "^4.18.1",
+    "jest": "^28.1.3",
+    "mongoose": "^6.4.6",
+    "nodemon": "^2.0.19"
   }
 }
