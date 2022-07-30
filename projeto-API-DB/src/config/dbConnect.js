@@ -1,7 +1,21 @@
 const mongoose = require("mongoose")
 
-mongoose.connect("mongodb+srv://Daysedev:syhus2021@cluster0.dq2g1.mongodb.net/reprograma")
+const mongoose = require('mongoose')
 
-    let db = mongoose.connection
+// função de conexao com banco 
+const connect = async() => {
+    try {
+        await mongoose.connect(process.env.DATABASE_URI, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        })
+        console.log('Banco Conectado!')
+    }  catch (error) {
+        console.log(error)
+    }
+}
 
-    module.exports = db
+
+module.exports = {
+    connect,
+}

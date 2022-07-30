@@ -1,15 +1,15 @@
-const express = require ("express");
-const index = require ("./routes/index.js"); 
-const livros = require ("./routes/livros.js");
-const db = require ("./config/dbConnect.js");
-
-db.on("error", console.log.bind(console, 'Erro de conexão'))
-db.once("open", () => {
-    console.log('Conexão com o banco feita com sucesso')
-});
+require("dotenv").config()
+const express = require('express')
+const index = require('./routes/index.js')
+const series = require('./routes/seriesRoutes.js')
+const mongoose = require ("./config/dbConnect");
 
 
 const app = express();
+
+app.use(express.json());
+mongoose.connect()
+
 
 app.use(express.json());
 
@@ -21,8 +21,7 @@ app.use(function (req, res, next) {
     )
     next()
 })
-
 app.use("/", index);
-app.use("/livros", livros);
+app.use('/series', series)
 
 module.exports = app;
