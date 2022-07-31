@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/reprograma/On16-TodasEmTech-S12-Intro-BD#readme",
   "devDependencies": {
+    "eslint": "8.16.0",
     "nodemon": "^2.0.15"
   },
   "dependencies": {
