@@ -1,0 +1,30 @@
+{
+  "name": "series",
+  "version": "1.0.0",
+  "description": "projeto API com banco de dados Mongo DB - Semana 12 da Reprograma",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lialaurindo/On16-TodasEmTech-S12-Intro-BD.git"
+  },
+  "keywords": [
+    "API",
+    "Rest",
+    "MongoDB"
+  ],
+  "author": "Lia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lialaurindo/On16-TodasEmTech-S12-Intro-BD/issues"
+  },
+  "homepage": "https://github.com/lialaurindo/On16-TodasEmTech-S12-Intro-BD#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.3.8",
+    "nodemon": "^2.0.16"
+  }
+}
